@@ -3,16 +3,22 @@ A small program I wrote do decide whether content is interlaced or not using mpl
 
 Since mplayer(2) itself does not detect if a source is interlaced or not I started a small project to analyse a source with mplayers pullup filter.
 
-basically it collects the output of :
+basically it collects the output of:
+
 mplayer2 -noframedrop -lavdopts threads=8 -speed 100 -v "path to input" -nosound -vo null -ao null -nosub -vf pullup
+
 and:
+
 mplayer2 -noframedrop -lavdopts threads=8 -speed 100 -v "path  to input" -nosound -vo null -ao null -nosub -vf pp=lb,pullup
 
 which both output stuff like:
 
 V:  17.9 537/537 156% 513%  0.0% 0 0 100.00x
+
 affinity: .0++1..2+.3.
+
 breaks:   .0..1..2|.3.
+
 duration: 2
 
 per frame.
