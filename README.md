@@ -9,10 +9,12 @@ and:
 mplayer2 -noframedrop -lavdopts threads=8 -speed 100 -v "path  to input" -nosound -vo null -ao null -nosub -vf pp=lb,pullup
 
 which both output stuff like:
-[code]V:  17.9 537/537 156% 513%  0.0% 0 0 100.00x
+
+V:  17.9 537/537 156% 513%  0.0% 0 0 100.00x
 affinity: .0++1..2+.3.
 breaks:   .0..1..2|.3.
-duration: 2[/code]
+duration: 2
+
 per frame.
 
 Depending if there's a + or a ++ between the numbers in affinity it counts light (+) and strong (++) affinities, whether or not there is a break and how the duration changed.
