@@ -1,7 +1,7 @@
 # MPlayerInterlaceDetection
 A small program I wrote do decide whether content is interlaced or not using mplayer(2). 
 
-Since [url=https://www.videohelp.com/tools/MPlayer]mplayer[/url](2) itself does not detect if a source is interlaced or not I started a small project to analyse a source with mplayers pullup filter.
+Since mplayer(2) itself does not detect if a source is interlaced or not I started a small project to analyse a source with mplayers pullup filter.
 
 basically it collects the output of :
 mplayer2 -noframedrop -lavdopts threads=8 -speed 100 -v "path to input" -nosound -vo null -ao null -nosub -vf pullup
